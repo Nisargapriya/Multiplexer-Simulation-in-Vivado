@@ -29,13 +29,75 @@ Input/Output Signal Diagram:
 
 
 RTL Code:
+module mux_4_to_1(
+    input wire a,
+    input wire b,
+    input wire c,
+    input wire d,
+    input wire [1:0] s,
+    output reg y
+    );
+
+    always @(*)
+    begin
+        case(s)
+            2'b00: y = a;
+            2'b01: y = b;
+            2'b10: y = c;
+            2'b11: y = d;
+            default: y = 1'bx;
+        endcase
+    end
+
+endmodule
 
 
 TestBench:
+module mux_4_to_1_tb;
 
+    reg tb_a;
+    reg tb_b;
+    reg tb_c;
+    reg tb_d;
+    reg [1:0] tb_s;
+    wire tb_y;
+
+    mux_4_to_1 dut (
+        .a(tb_a),
+        .b(tb_b),
+        .c(tb_c),
+        .d(tb_d),
+        .s(tb_s),
+        .y(tb_y)
+    );
+
+    initial begin
+        // Test Case 1
+        tb_a = 1'b1; tb_b = 1'b0; tb_c = 1'b1; tb_d = 1'b0;
+        
+        tb_s = 2'b00; #10;
+        tb_s = 2'b01; #10;
+        tb_s = 2'b10; #10;
+        tb_s = 2'b11; #10;
+
+        // Test Case 2
+        tb_a = 1'b0; tb_b = 1'b1; tb_c = 1'b0; tb_d = 1'b1;
+
+        tb_s = 2'b00; #10;
+        tb_s = 2'b01; #10;
+        tb_s = 2'b10; #10;
+        tb_s = 2'b11; #10;
+        
+        #20;
+        $finish;
+    end
+
+endmodule
 
 
 Output waveform:
+![WhatsApp Image 2025-09-12 at 09 42 10_c4f558f6](https://github.com/user-attachments/assets/0b668ead-0b83-457f-8254-ff6fa10f57ee)
+
 
 
 
