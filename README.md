@@ -26,7 +26,8 @@ Under "Simulation", modify the Run Time (e.g., set to 1000ns).<br>
 <br>
 
 Input/Output Signal Diagram:
-
+<img width="593" height="280" alt="image" src="https://github.com/user-attachments/assets/0efcef78-12a5-4225-b272-4643899d2e57" />
+<img width="1043" height="835" alt="image" src="https://github.com/user-attachments/assets/1c8fa643-4dc4-4f26-bc1c-27c4a7604f63" />
 
 RTL Code:
 module mux_4_to_1(
@@ -50,7 +51,6 @@ module mux_4_to_1(
     end
 
 endmodule
-
 
 TestBench:
 module mux_4_to_1_tb;
@@ -94,12 +94,8 @@ module mux_4_to_1_tb;
 
 endmodule
 
-
 Output waveform:
-![WhatsApp Image 2025-09-12 at 09 42 10_c4f558f6](https://github.com/user-attachments/assets/0b668ead-0b83-457f-8254-ff6fa10f57ee)
-
-
-
+<img width="1646" height="817" alt="image" src="https://github.com/user-attachments/assets/34629dec-7637-4f0f-b86e-a496a41b35fa" />
 
 Conclusion:
 
