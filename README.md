@@ -30,6 +30,7 @@ Input/Output Signal Diagram:
 <img width="1043" height="835" alt="image" src="https://github.com/user-attachments/assets/1c8fa643-4dc4-4f26-bc1c-27c4a7604f63" />
 
 RTL Code:
+```verilog
 module mux_4_to_1(
     input wire a,
     input wire b,
@@ -51,8 +52,9 @@ module mux_4_to_1(
     end
 
 endmodule
-
+```
 TestBench:
+```verilog
 module mux_4_to_1_tb;
 
     reg tb_a;
@@ -93,6 +95,7 @@ module mux_4_to_1_tb;
     end
 
 endmodule
+```
 
 Output waveform:
 <img width="1646" height="817" alt="image" src="https://github.com/user-attachments/assets/34629dec-7637-4f0f-b86e-a496a41b35fa" />
